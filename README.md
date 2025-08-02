@@ -36,10 +36,12 @@ Hi, I'm Kenny! I'm a Data Analytics Manager, AI Builder, and founder of the AI L
 3. **Create a Virtual Environment and Install Dependencies**
 
     ```bash
-    uv install
+    uv sync
     ```
 
 4. **Copy the .env.example file to .env and add your API keys**
+
+    If on MacOS or Linux you can run the following command:
 
     ```bash
     cp .env.example .env
