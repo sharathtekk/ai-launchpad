@@ -17,3 +17,6 @@ uv.lock
 
 # env
 .env
+
+# temp trash folder
+temp
