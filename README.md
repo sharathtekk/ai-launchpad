@@ -45,6 +45,15 @@ Hi, I'm Kenny! I'm a Data Analytics Manager, AI Builder, and founder of the AI L
     cp .env.example .env
     ```
 
+    The required API keys are:
+    - [OPENAI_API_KEY](https://platform.openai.com/account/api-keys) (required)
+    - [TAVILY_API_KEY](https://tavily.com/) (required)
+    - [LANGSMITH_API_KEY](https://smith.langchain.com/) (optional)
+
+    We use OpenAI as the LLM provider and Tavily as the search engine. I also highly recommend getting a free Langsmith API key for tracing and monitoring. This is a critical tool for debugging and optimizing AI applications.
+
+    The project also has the Anthropic (langchain_anthropic) and Ollama (langchain_ollama) langchain integrations installed so you can easily switch to Anthropic or Ollama models if you prefer.
+
 5. **Run the Code!**
 
     **This project uses ipykernel for interactive development!**
