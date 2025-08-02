@@ -29,7 +29,7 @@ Hi, I'm Kenny! I'm a Data Analytics Manager, AI Builder, and founder of the AI L
 2. **Clone the Repository and Navigate to the Project Directory**
 
     ```bash
-    git clone https://github.com/kenneth-liao/ai-launchpad
+    git clone https://github.com/kenneth-liao/ai-launchpad.git
     cd ai-launchpad
     ```
 
