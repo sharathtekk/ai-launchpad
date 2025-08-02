@@ -1,5 +1,18 @@
 """
+Agents are useful when you have a complex task that requires multiple steps to complete but the number, order, and details of the steps are not known in advance.
 
+The defining capabilities of agents are:
+1. Agency. The agent can decide what to do next based on the current state.
+2. Acting. The agent can use tools to take action on its environment. 
+3. Perceiving. It can also perceive the environment.
+3. Self-refining. The agent has the capacity to improve its performance over time, e.g. learning from its own mistakes.
+
+## KEY TAKEAWAYS
+1. Agents are useful when you have a complex task that requires multiple steps to complete but the number, order, and details of the steps are not known in advance.
+2. When put to the right task, they can be extremely powerful and capable.
+3. Agents are probabilistic and can therefore be highly creative. But this also means that the agent may be highly unpredictable with varying outputs.
+4. If you can clearly define the steps needed to solve a task, then an agent is likely not the best solution. Instead, a workflow where you can optimize every step of the process will likely produce a higher quality output and more reliably.
+5. Always explore the simplest solutions first. Agents are complex and harder to debug and optimize. Only use them if you have clearly established that a simpler workflow will not work.
 """
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
@@ -12,6 +25,7 @@ from langgraph.prebuilt import ToolNode
 from langchain_core.tools import tool
 from langgraph.checkpoint.memory import MemorySaver
 from langchain_tavily import TavilySearch, TavilyExtract
+from datetime import datetime
 
 load_dotenv()
 
@@ -21,6 +35,7 @@ llm = ChatOpenAI(
     name="Jude",
     model="gpt-4.1-mini-2025-04-14",
     # model="gpt-4.1",
+    model="gpt-4o-mini",
     temperature=0.1,
 )
 
@@ -341,7 +356,7 @@ tools = [generate_task_list, view_task_list, search_web, extract_content_from_we
 llm_with_tools = llm.bind_tools(tools)
 
 def agent(state: AgentState):
-    system_prompt = SystemMessage(content="""You are a LinkedIn content creator specializing in AI topics. Your job is to create engaging LinkedIn posts that are informative and create high value for the reader. All posts should meet the requirements below.
+    system_prompt = SystemMessage(content=f"""You are a LinkedIn content creator specializing in AI topics. Your job is to create engaging LinkedIn posts that are informative and create high value for the reader. All posts should meet the requirements below.
 
     <Post_Requirements>
     - 100-300 words long
@@ -378,6 +393,8 @@ def agent(state: AgentState):
     extract_content_from_webpage: Use this tool to extract the complete contents from a webpage given the url.
     view_golden_posts: Use this tool to view examples of gold standard posts before writing your final post.
     </Tools>
+                                  
+    The current date and time is {datetime.now()}.
     """)
     response = llm_with_tools.invoke([system_prompt] + state.messages)
     return {"messages": [response]}
