@@ -1,3 +1,13 @@
+"""
+Prompt chaining is useful for complex workflows that require multiple steps to complete.
+
+The example we'll build here is a blog post creation workflow with 3 main steps: outline, draft, and SEO optimization.
+
+## KEY TAKEAWAYS
+1. Breaking down a complex task into multiple steps allows us to have fine-grained control over the output of each step.
+2. We can use the output of one step as the input to the next step. This allows us to build complex workflows by chaining together multiple prompts. Using multiple prompts also separates concerns which minimizes model hallucinations and context distraction. 
+3. Task decomposition also allows us to highly optimize each step independently.
+"""
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.tools import tool

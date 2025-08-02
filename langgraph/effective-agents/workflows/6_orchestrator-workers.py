@@ -1,9 +1,11 @@
 """
-Orchestrator-Workers
+Orchestration-workers is useful for when you have a complex goal that we want to break down into smaller tasks, but where we don't know the number or details of the sub-tasks in advance.
 
-In this design pattern, we have a main orchestrator agent that coordinates the work of multiple worker agents. The orchestrator agent is responsible for breaking down the task into smaller sub-tasks and assigning those sub-tasks to the worker agents. The outputs from the worker agents are then combined into a final output. While this is similar to the parallelization pattern, the key difference is that the orchestrator agent has agency and can decide how to break down the task and assign work to the worker agents. There is also no pre-determined set of parallel tasks or workflows, as we've defined in the parallelization pattern.
+The example we'll build here is a deep research workflow that breaks down a user's query into multiple sub-tasks and assigns those tasks to workers. The workers perform web search and content extraction to gather information, and then a synthesizer combines the reports from all workers into a single, comprehensive final report.
 
-https://www.anthropic.com/engineering/built-multi-agent-research-system
+## KEY TAKEAWAYS
+1. The orchestrator is responsible for breaking down the task into smaller sub-tasks and assigning those sub-tasks to the workers. So the orchestrator decides  what the sub-tasks are and how many there are.
+2. While orchestrator-workers and parallelization are similar, the key difference is that the orchestrator agent has agency and can decide how to break down the task and assign work to the workers. There is no pre-determined set of parallel tasks or workflows, as we've defined in the parallelization pattern.
 """
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI

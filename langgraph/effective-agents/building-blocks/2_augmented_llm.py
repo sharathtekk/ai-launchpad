@@ -1,3 +1,10 @@
+"""
+The augmented LLM is the core building block of AI agents.
+
+## KEY TAKEAWAYS
+1. We can enhance the basic LLM with memory and tools to create an augmented LLM, but it's still missing `agency` or the ability to make decisions so not quite an agent yet.
+2. Through tools, augmented LLMs have the ability to act on the environment and retrieve additional context.
+"""
 from dotenv import load_dotenv
 import json
 from langchain_openai import ChatOpenAI
@@ -133,7 +140,7 @@ for msg in response["messages"]:
 
 
 #################################
-# Langchain Tools
+# Tools
 #################################
 
 # ... but first defining Langchain tools

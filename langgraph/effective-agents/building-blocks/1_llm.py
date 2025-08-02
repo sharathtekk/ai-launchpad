@@ -1,12 +1,16 @@
+"""
+LLMs are the brains or intelligence of AI agents and applications.
+
+## KEY TAKEAWAYS
+1. LLMs are stateless. Each API call is independent. Each time you invoke the LLM or a Langgraph graph, it has no memory of previous interactions.
+2. To go from LLMs to agents, we require 3 additional components: memory or state, tools or the ability to act, and agency or the ability to make decisions.
+"""
 from dotenv import load_dotenv
 
-
-# For Langgraph applications we can use the OpenAI integration from Langchain
+# For Langgraph applications we can use the OpenAI integration from Langchain (ChatOpenAI)
+from langchain_openai import ChatOpenAI
 # This gives several benefits including automatic tracing and observability if using LangSmith
 # Langchain has similar integrations for almost all LLM providers
-from langchain_openai import ChatOpenAI
-# from langchain_anthropic import ChatAnthropic
-
 
 load_dotenv()
 

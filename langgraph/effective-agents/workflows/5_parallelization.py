@@ -1,5 +1,13 @@
 """
-Parallelization is a powerful pattern for building complex workflows. 
+Parallelization is useful when you have multiple independent tasks that can be performed in parallel.
+
+The example we'll build here is a LinkedIn content creation workflow with 3 main tasks: generate post, generate image, and generate hashtags. These will all be ran in parallel and then combined into a final output.
+
+## KEY TAKEAWAYS
+1. Similar to routing, having separate workflows that we can run in parallel allows us to separate concerns and optimize each workflow independently. But the key benefit of parallelization is that we can perform multiple tasks simultaneously, which can significantly reduce the overall latency of the workflow.
+2. Another benefit of parallelization is breadth. 
+    - By running multiple tasks in parallel, we can explore multiple angles and perspectives simultaneously, which can lead to more creative and insightful solutions.
+    - Some examples where parallelization and breadth are beneficial are evaluations (run guardrails, evaluate tone, quality, etc.), brainstorming (explore multiple angles), or sectioning as in this example.
 """
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI

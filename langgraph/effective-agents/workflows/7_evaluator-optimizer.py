@@ -1,16 +1,24 @@
 """
-LLM generation can range from being highly deterministic and repeatable to being highly stochastic and creative. In the former case, we can use traditional testing and evaluation methods. In the latter case, we need to be able to provide general evaluation guidelines but still account for a wide range of acceptable outputs. This is where an LLM as a judge can be very useful.
+Evaluator-optimizer is useful when you want to generate something and then iteratively improve it based on feedback.
 
-Examples of fixed evaluations that can be very effective include:
+In this example we'll build a python code generator that iteratively improves the code based on feedback.
+
+LLM generation can range from being highly deterministic and repeatable (structured outputs) to being highly stochastic and creative (marketing copy). In the former case, we can use traditional testing and evaluation methods. In the latter case, we need to be able to provide general evaluation guidelines but still account for a wide range of acceptable outputs. This is where an LLM as a judge can be very useful.
+
+Examples of hard-coded evaluations:
 1. Does the code compile?
-2. Does the post include hashtags?
 3. Is the post within the character limit?
 
-Examples of more creative evaluations include:
+Examples of more creative evaluations where an LLM-as-a-judge is useful:
 1. Does the post maintain a professional tone?
 2. Is the post engaging?
 3. Does the post effectively answer the user's query?
 4. Does the email include personalization?
+
+## KEY TAKEAWAYS
+1. The evaluator-optimizer pattern is best suited for when you can clearly define the evaluation criteria and there is measurable improvement in the output with each evaluation cycle.
+2. Evaluation criteria can range from being hard-coded (does the code compile?) to being more creative (is the post engaging?). In the latter case, an LLM-as-a-judge can be very useful.
+3. You can effectively combined different types of evaluators to create a more robust evaluation process.
 """
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI

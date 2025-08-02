@@ -1,11 +1,11 @@
 """
-Routing is a powerful pattern for building complex workflows. 
+Routing is useful when you have a complex workflow with multiple paths that depend on some condition.
 
-In this example we'll build a workflow for a copywriter where the content requirements are different for each platform: LinkedIn, Instagram, and Blog. 
+The example we'll build here is a content creation workflow with a router that classifies the customer's request into one of the content types: LinkedIn, Instagram, and Blog.
 
-The benefit of this approach is that you have a high level of control and customization over each workflow, so they can be independently tuned and optimized. We may have different requirements, tools, and evaluation criteria for each platform. 
-
-It also makes the system modular. You can add a new platform by simply adding a new node and edge to the graph, without having to significantly change the existing code.
+## KEY TAKEAWAYS
+1. Similar to prompt chaining, having separate workflows that we can route to allows us to separate concerns and optimize each workflow independently. Our requirements, tools, and evaluation criteria for LinkedIn posts can be very different from our requirements for a Blog post.
+2. Routing also makes the system modular. In this example you can add a new platform by simply adding a new node and edge to the graph, without having to significantly change the existing code.
 """
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
