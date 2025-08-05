@@ -180,6 +180,8 @@ def generate_hashtags(state: WorkflowState):
 # Combine Results Flow
 #################################
 
+# This is a perfect example where simpler is better and less AI leads to better results.
+# We could have an LLM generate all of this HTML code including injecting the image, text, and hashtags. However, this is a very brittle approach that is likely to break and requires a lot of tuning.
 def create_preview(state: WorkflowState):
     """Create post preview - just image, text, hashtags in an html file"""
     try:
