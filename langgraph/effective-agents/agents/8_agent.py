@@ -33,9 +33,9 @@ load_dotenv()
 # Switch models to see how the post quality improves with a more capable model
 llm = ChatOpenAI(
     name="Jude",
-    model="gpt-4.1-mini-2025-04-14",
+    # model="gpt-4.1-mini-2025-04-14",
     # model="gpt-4.1",
-    model="gpt-4o-mini",
+    model="gpt-4o",
     temperature=0.1,
 )
 
@@ -380,6 +380,7 @@ def agent(state: AgentState):
     - Use the view_task_list tool and verify that all tasks are complete before providing your final response.
     - When you're ready to write the post, always use the view_golden_posts tool to view examples of gold standard posts. Use the golden standard posts to inform the writing style and format of your post before writing your final post.
     - If you need more information to understand the request, ask the user. Gather any necessary context before proceeding.
+    - Bias towards searching the web for the latest information rather than relying on your existing knowledge or making assumptions.
     </Guidelines>
     
     <Tool_Usage>
