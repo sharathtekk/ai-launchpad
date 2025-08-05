@@ -4,7 +4,7 @@ The AI Launchpad is a community for AI builders, engineers, and architects who w
 
 This repo contains tutorials, code templates, and examples to help you get started. Whether you're just learning about AI or you've already built some AI agents in production, my goal with this repo is to provide you with as much value as possible. So please, open issues, leave me comments, and share your feedback.
 
-> 💬 Join the new **AI Launchpad** [**discord**](https://discord.gg/RtBnjspp)! Learn, build, share, and connect with other AI builders!
+> 💬 Join the new **AI Launchpad** [**community**](https://kenneth-liao.kit.com/join)! Learn, build, share, and connect with other AI builders!
 
 ## About Me 👋🏼
 
@@ -78,6 +78,6 @@ At some point I'll also be migrating past projects from my Youtube channel to th
 
 1. [Building Effective Agents (langgraph/effective-agents)](langgraph/effective-agents/README.md)
 
-    - Watch the [Youtube Video](https://youtu.be/31JoTDm7jkM)!
+    - Watch the [Youtube Video](https://youtu.be/jsT4YUgz1E4)!
     - Anthropic's guide to [building effective agents](https://www.anthropic.com/engineering/building-effective-agents) is a gold standard for building effective agents. I recommend everyone that's building AI agents to read this. Understand these core design patterns and you'll be able to solve almost any problem with AI.
     - Learn how to implement all of the core design patterns of AI workflows from routing to parallelization, to a powerful LinkedIn content creator agent, all in Langgraph.
