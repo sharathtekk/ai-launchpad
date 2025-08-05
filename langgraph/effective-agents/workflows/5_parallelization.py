@@ -153,6 +153,11 @@ def save_image(state: WorkflowState):
 #################################
 
 def generate_hashtags(state: WorkflowState):
+    last_message = state.messages[-1]
+    if isinstance(last_message, HumanMessage):
+        context = last_message.content
+    else:
+        context = ""
     prompt = HumanMessage(content=f"""
     You are an expert content creator for LinkedIn. Your job is to generate a list of hashtags for the following post. The hashtags should meet the requirements below.
     
@@ -164,7 +169,7 @@ def generate_hashtags(state: WorkflowState):
     </Requirements>
                                   
     <Post>
-    {state.post}
+    {context}
     </Post>
     """)
     response = llm.invoke([prompt])
