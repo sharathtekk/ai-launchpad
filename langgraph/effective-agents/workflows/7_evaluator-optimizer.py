@@ -148,6 +148,8 @@ graph = builder.compile()
 from IPython.display import Image
 Image(graph.get_graph().draw_mermaid_png())
 
+# Try these example queries
+"create a fastapi backend to serve langgraph agents. it should handle managing different conversation threads, streaming, and state management."
 
 response = graph.invoke(
     input=WorkflowState(messages=["write a python script that reads a csv into a pandas dataframe, plots a histogram of the first column, and saves it to a file"]),
