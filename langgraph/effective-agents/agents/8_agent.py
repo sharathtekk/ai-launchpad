@@ -86,7 +86,7 @@ def view_task_list():
 @tool
 def search_web(query: str, num_results: int = 3) -> str:
     """Search the web with a natural language query"""
-    tavily_search = TavilySearch(max_results=max(num_results, 3), topic="general")
+    tavily_search = TavilySearch(max_results=min(num_results, 3), topic="general")
     search_results = tavily_search.invoke(input={"query": query})
     
     processed_results = {
