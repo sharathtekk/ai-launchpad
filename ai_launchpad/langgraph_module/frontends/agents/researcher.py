@@ -18,7 +18,7 @@ load_dotenv()
 llm = ChatOpenAI(
     name="Researcher",
     model="gpt-5-mini-2025-08-07",
-    # model="gpt-5",
+    # model="gpt-5-2025-08-07",
     temperature=0.1,
 )
 
@@ -38,7 +38,7 @@ class AgentState(BaseModel):
 
 # The agent will also have web search capabilities for content research
 @tool
-def search_web(query: str, num_results: int = 3) -> str:
+def search_web(query: str, num_results: int = 3):
     """Search the web.
     
     Args:
@@ -65,7 +65,7 @@ def search_web(query: str, num_results: int = 3) -> str:
 tavily_extract = TavilyExtract()
 
 @tool
-def extract_content_from_webpage(url: str) -> str:
+def extract_content_from_webpage(url: str):
     """Extract the content from a webpage.
 
     Args:
