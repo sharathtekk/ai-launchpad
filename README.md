@@ -1,10 +1,12 @@
 # The AI Launchpad 🚀
 
-The AI Launchpad is a community for AI builders, engineers, and architects who want to learn, build, and solve real-world problems with AI.
+The AI Launchpad is a community for AI builders, engineers, and architects who want to learn, build, and solve real problems with AI.
 
 This repo contains tutorials, code templates, and examples to help you get started. Whether you're just learning about AI or you've already built some AI agents in production, my goal with this repo is to provide you with as much value as possible. So please, open issues, leave me comments, and share your feedback.
 
-> 💬 Join the new **AI Launchpad** [**community**](https://kenneth-liao.kit.com/join)! Learn, build, share, and connect with other AI builders!
+> Note: I am rapidly iterating on this repo so things will be broken and incomplete at times. Please be patient and help me make this the best resource it can be!
+
+💯 Join the new **AI Launchpad** [**community**](https://kenneth-liao.kit.com/join)! Learn, build, share, and connect with other AI builders!
 
 ## About Me 👋🏼
 
@@ -16,9 +18,15 @@ Hi, I'm Kenny! I'm a Data Analytics Manager, AI Builder, and founder of the AI L
 
 1. **Install Dependencies**
 
-    I recommend using uv to manage virtual environments and dependencies.
+    I recommend uv to manage python projects.
 
-    For MacOS and Linux you can run the following curl command:
+    For MacOS it's easiest to install with homebrew:
+
+    ```bash
+    brew install uv
+    ```
+
+    For MacOS and Linux you can also run the following curl command:
 
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -38,6 +46,8 @@ Hi, I'm Kenny! I'm a Data Analytics Manager, AI Builder, and founder of the AI L
     ```bash
     uv sync
     ```
+
+    This also installs the ai_launchpad project in editable mode so any changes to the codebase will be immediately reflected.
 
 4. **Copy the .env.example file to .env and add your API keys**
 
@@ -70,14 +80,12 @@ Hi, I'm Kenny! I'm a Data Analytics Manager, AI Builder, and founder of the AI L
 
 ## Current Projects
 
-This is the first project I'm releasing in this new AI Launchpad repo. As I release new tutorials and code templates, I'll add them here so make sure to follow the repo for updates!
+As I release new tutorials and code templates, I'll add them here so make sure to follow the repo for updates!
 
 At some point I'll also be migrating past projects from my Youtube channel to this repo.
 
-### Langgraph
+### [Langgraph Module](ai_launchpad/langgraph_module/README.md)
 
-1. [Building Effective Agents (langgraph/effective-agents)](langgraph/effective-agents/README.md)
-
-    - Watch the [Youtube Video](https://youtu.be/jsT4YUgz1E4)!
-    - Anthropic's guide to [building effective agents](https://www.anthropic.com/engineering/building-effective-agents) is a gold standard for building effective agents. I recommend everyone that's building AI agents to read this. Understand these core design patterns and you'll be able to solve almost any problem with AI.
-    - Learn how to implement all of the core design patterns of AI workflows from routing to parallelization, to a powerful LinkedIn content creator agent, all in Langgraph.
+1. [Building Effective Agents (langgraph_module/effective_agents)](ai_launchpad/langgraph_module/effective_agents/README.md)
+2. [Frontends for Langgraph Agents (langgraph_module/frontends)](ai_launchpad/langgraph_module/frontends/README.md)
+3. [Langgraph Server (langgraph_module/langgraph_server)](ai_launchpad/langgraph_module/langgraph_server/README.md)
