@@ -4,7 +4,9 @@ The AI Launchpad is a community for AI builders, engineers, and architects who w
 
 This repo contains tutorials, code templates, and examples to help you get started. Whether you're just learning about AI or you've already built some AI agents in production, my goal with this repo is to provide you with as much value as possible. So please, open issues, leave me comments, and share your feedback.
 
-> 💬 Join the new **AI Launchpad** [**community**](https://kenneth-liao.kit.com/join)! Learn, build, share, and connect with other AI builders!
+> Note: I am rapidly iterating on this repo so things will be broken and incomplete at times. Please be patient and help me make this the best resource it can be!
+
+💯 Join the new **AI Launchpad** [**community**](https://kenneth-liao.kit.com/join)! Learn, build, share, and connect with other AI builders!
 
 ## About Me 👋🏼
 
