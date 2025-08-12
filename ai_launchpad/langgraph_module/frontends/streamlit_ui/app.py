@@ -14,6 +14,8 @@ from ai_launchpad.langgraph_module.frontends.streamlit_ui.api import (
     run_thread_stream,
     delete_thread,
 )
+import json
+
 
 #################################
 # Session State Management
@@ -130,7 +132,11 @@ if st.session_state.thread_state:
         # Apply some formatting depending on the message type
         if message["type"] == "tool":
             with st.expander(f"🛠️ {message["name"]} < RESULTS > "):
-                st.json(message["content"])
+                try:
+                    json_message = json.loads(message["content"])
+                    st.json(json_message)
+                except:
+                    st.write(message["content"])
         elif message["type"] == "ai" and message["tool_calls"]:
             with st.chat_message("ai"):
                 st.markdown(f"🛠️ {message['tool_calls'][0]["name"]} < CALL >")
