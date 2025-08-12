@@ -1,0 +1,8 @@
+{
+  "dependencies": ["../../."],
+  "graphs": {
+    "Researcher": ".././frontends/agents/researcher.py:graph",
+    "Planner": ".././frontends/agents/planner.py:graph"
+  },
+  "env": ".././.env"
+}

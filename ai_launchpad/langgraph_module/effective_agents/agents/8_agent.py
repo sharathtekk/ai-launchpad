@@ -33,9 +33,9 @@ load_dotenv()
 # Switch models to see how the post quality improves with a more capable model
 llm = ChatOpenAI(
     name="Jude",
-    # model="gpt-4.1-mini-2025-04-14",
+    # model="gpt-5-mini-2025-08-07",
     # model="gpt-4.1",
-    model="gpt-4o",
+    model="gpt-5",
     temperature=0.1,
 )
 
@@ -423,6 +423,7 @@ builder.add_conditional_edges(
 )
 
 graph = builder.compile(checkpointer=MemorySaver())
+graph_no_checkpointer = builder.compile()
 
 # Visualize the graph
 from IPython.display import Image
