@@ -79,6 +79,8 @@ def generate_task_list(task_list: TaskList):
 @tool
 def view_task_list():
     """View the task list"""
+    if "tasks" not in store:
+        return "No task list found."
     return store["tasks"].model_dump_json()
 
 # The agent will also have web search capabilities for content research

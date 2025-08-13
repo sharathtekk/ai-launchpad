@@ -64,6 +64,8 @@ def generate_task_list(task_list: TaskList) -> str:
 @tool
 def view_task_list() -> str:
     """View the task list"""
+    if "tasks" not in store:
+        return "No task list found."
     return store["tasks"].model_dump_json()
 
 
