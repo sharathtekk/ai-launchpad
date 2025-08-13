@@ -20,13 +20,15 @@
 
     This will start the Langgraph server on `http://localhost:2024`. You can now make API calls to the server to create and manage agents, threads, and messages. See your Langgraph API documentation at `http://localhost:2024/docs`.
 
-    > **Note:** Agents are loaded from the `frontends/agents` directory. You can add your own agents to this directory, update the `langgraph.json` file, and they will be automatically loaded by the Langgraph server.
-
 You can now interact with your agents via the Langgraph API. For a full tutorial on how to build a UI on top of the Langgraph API, check out the `frontends/streamlit_ui` directory.
+
+### Loading Your Own Agents
+
+You can use any agents within the `ai_launchpad/langgraph_module` directory or create your own in `ai_launchpad/langgraph_module/frontends/agents`. To load them into the Langgraph server, update the `langgraph.json` file. For more info on the `langgraph.json` configuration file, see the resources section below.
 
 ## Langgraph Production Server
 
-Coming soon... See my previous [Youtube video](https://youtu.be/xd0oy2FC5g0) on deploying Langgraph to production.
+Documentation coming soon... See my [Youtube video](https://youtu.be/xd0oy2FC5g0) on deploying Langgraph to production.
 
 ## Resources
 

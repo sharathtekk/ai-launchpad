@@ -13,7 +13,7 @@ This directory contains frontends for interacting with Langgraph Agents via the 
     langgraph dev
     ```
 
-    This will start the Langgraph server on `http://localhost:2024`. You can now make API calls to the server to create and manage agents, threads, and messages. See your Langgraph API documentation at `http://localhost:2024/docs`.
+    This will start the Langgraph server on `http://localhost:2024`. You can now make API calls to the server to create and manage agents, threads, and messages. See your Langgraph API documentation at `http://localhost:2024/docs`. Follow these [instructions](../langgraph_server/README.md) to load your own agents into the Langgraph server.
 
 3. Run the Streamlit app.
 
