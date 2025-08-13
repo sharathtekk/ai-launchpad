@@ -1,16 +1,18 @@
-# The AI Launchpad 🚀
+# The AI Launchpad
 
-This repo contains tutorials, code templates, and examples to help you get started with building AI applications. Whether you're just learning or you've already built some AI agents in production, my goal with this repo is to provide you with as much value as possible. So please, open issues, leave me comments, and share your feedback.
+![AI Launchpad](ai_launchpad/static/ai-launchpad-logo-wide.png)
 
-> Note: I am rapidly iterating on this repo so things will be broken and incomplete at times. Please be patient and help me make this the best resource it can be!
+This repo contains tutorials, code templates, and examples to help you build AI applications. Whether you're just learning or you have AI agents in production, I want to bring you as much value as possible. So please, open issues, leave me comments, and share your feedback.
 
-The AI Launchpad is a community for AI builders, engineers, and architects who want to learn, build, and solve real problems with AI. Get help, resources, and connect with other builders.
+> Note: I'm rapidly iterating on this repo so things will be broken and incomplete at times.
 
-💯 Sign up for the [**AI Launchpad**](https://kenneth-liao.kit.com/join) waitlist and get access to the Discord server.
+The AI Launchpad is a community for AI builders, entrepreneurs, and business leaders who want to learn, build, and solve real problems with AI. Get help, resources, connect with other builders, and accelerate your AI journey. 🚀
+
+💯 Sign up for the [**AI Launchpad**](https://kenneth-liao.kit.com/join) waitlist and get access to the Discord server (live now!).
 
 ## About Me 👋🏼
 
-Hi, I'm Kenny! I'm a Data Analytics Manager, AI Builder, and founder of the AI Launchpad. I also have a [YouTube channel](https://www.youtube.com/@KennethLiao) where **I teach how to build AI solutions that solve real-world problems**.
+Hi! I'm Kenny, a Data Analytics Manager, AI Architect, and founder of the AI Launchpad. I also have a [YouTube channel](https://www.youtube.com/@KennethLiao) where **I teach you how to build AI solutions that solve real problems**.
 
 ---
 
