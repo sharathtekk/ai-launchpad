@@ -14,7 +14,7 @@ Watch the [Youtube Video](https://youtu.be/31JoTDm7jkM)!
 
 ## Concepts
 
-1. [LLMs](1_api_calls.py)
+1. [LLMs](1_llms.py)
     - Make basic API calls to LLM providers.
     - Get structured outputs from LLMs.
     - Stream responses from the LLM.
