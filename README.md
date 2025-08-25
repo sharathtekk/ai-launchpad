@@ -53,22 +53,28 @@ Hi! I'm Kenny, a Data Analytics Manager, AI Architect, and founder of the AI Lau
 
 4. **Copy the .env.example file to .env and add your API keys**
 
-    The repo is organized into several modules. Each module will have its own `.env.example` corresponding to the required API keys for that module. Copy the `.env.example` file to `.env` and add your API keys.
-
     If on MacOS or Linux you can run the following command:
 
     ```bash
     cp .env.example .env
     ```
 
-    **Langgraph module**
+    **REQUIRED KEYS**
 
-    For the Langgraph module you need the following keys:
+    We use OpenAI as the default LLM provider and Tavily for search.
+
+    **[Agents module](ai_launchpad/agents_module/README.md):**
+
+    - [OPENAI_API_KEY](https://platform.openai.com/account/api-keys) (required)
+    - [TAVILY_API_KEY](https://tavily.com/) (required)
+
+    **[Langgraph module](ai_launchpad/langgraph_module/README.md):**
+
     - [OPENAI_API_KEY](https://platform.openai.com/account/api-keys) (required)
     - [TAVILY_API_KEY](https://tavily.com/) (required)
     - [LANGSMITH_API_KEY](https://smith.langchain.com/) (optional)
 
-    We use OpenAI as the LLM provider and Tavily as the search engine. I also highly recommend getting a free Langsmith API key for observability which is critical for debugging and optimizing AI applications.
+    I highly recommend getting a free Langsmith API key for observability which is critical for debugging and optimizing AI applications built with Langgraph.
 
     The project also has the Anthropic (langchain_anthropic) and Ollama (langchain_ollama) langchain integrations installed so you can easily switch to Anthropic or Ollama models if you prefer.
 
