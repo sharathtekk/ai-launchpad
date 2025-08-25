@@ -1,13 +1,11 @@
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-from pydantic import BaseModel, Field
-from typing import Annotated, Literal, List
-from langchain_core.messages import SystemMessage, AIMessage, HumanMessage, AIMessageChunk
+from pydantic import BaseModel
+from typing import Annotated
+from langchain_core.messages import SystemMessage
 from langgraph.graph import StateGraph, add_messages, END
-from langgraph.types import RunnableConfig
 from langgraph.prebuilt import ToolNode
 from langchain_core.tools import tool
-from langgraph.checkpoint.memory import MemorySaver
 from langchain_tavily import TavilySearch, TavilyExtract
 from datetime import datetime
 
