@@ -4,7 +4,7 @@ This directory contains frontends for interacting with Langgraph Agents via the 
 
 ## Getting Started
 
-1. If you haven't already, install the project by following the `Getting Started` instructions in the project root [README](../../README.md).
+1. If you haven't already, install the project by following the `Getting Started` instructions in the project root [README](../../../README.md).
 
 2. Once the `ai-launchpad` project is installed, navigate to the `ai_launchpad/langgraph_module` directory and start the Langgraph Server.
 
