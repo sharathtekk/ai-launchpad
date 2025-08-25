@@ -405,13 +405,12 @@ while True:
 
     function_call = None
     function_call_arguments = None
+    # Add the function call to the conversation
+    messages += response.output
 
     # Iterate through the output to check for function calls
     for item in response.output:
         if isinstance(item, ResponseFunctionToolCall):
-
-            # Add the function call to the conversation
-            messages += response.output
 
             # Parse the function call arguments and execute the function
             function_call = item
