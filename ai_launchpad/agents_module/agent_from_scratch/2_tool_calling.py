@@ -17,9 +17,7 @@ https://platform.openai.com/docs/guides/function-calling#page-top
 """
 from openai import OpenAI
 from dotenv import load_dotenv
-from pydantic import BaseModel, Field
-from datetime import datetime
-from langchain_tavily import TavilySearch, TavilyExtract
+from langchain_tavily import TavilySearch
 import json
 
 load_dotenv()
