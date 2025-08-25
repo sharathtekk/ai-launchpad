@@ -12,8 +12,8 @@ Watch the [Youtube Video](https://youtu.be/31JoTDm7jkM)!
 
 ## Getting Started
 
-1. If you haven't already, install the project by following the `Getting Started` instructions in the project root [README](../README.md).
-2. Once the `ai-launchpad` project is installed, navigate to the `langgraph/effective-agents` directory and start running the code in any file.
+1. If you haven't already, install the project by following the `Getting Started` instructions in the project root [README](../../../README.md).
+2. Once the `ai-launchpad` project is installed, navigate to the `langgraph_module/effective_agents` directory and start running the code in any file.
 
-    - If you're new to Langgraph and agents, I recommend starting with `1_llm.py` in the `building-blocks` directory and working your way up through the numbered files. However each file is self-contained so you can skip around as needed.
+    - If you're new to Langgraph and agents, I recommend starting with `1_llm.py` in the `building_blocks` directory and working your way up through the numbered files. However each file is self-contained so you can skip around as needed.
     - Any python file that begins with a number (e.g. 1_file.py) is meant to be run in interactive mode. Highlight the lines of code you want to run and press `shift+enter` to run them. Running the file as a script will produce all of the outputs at once which may not be helpful.

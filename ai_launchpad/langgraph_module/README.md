@@ -1,8 +1,8 @@
-# Langgraph
+# Langgraph Module
 
 ![Langgraph](../static/wordmark_dark.svg)
 
-This repo contains tutorials, code templates, and examples to help you master Langgraph.
+This module contains tutorials, code templates, and examples to help you master Langgraph.
 
 Langgraph is an open-source, agent orchestration framework. It's great for building complex AI workflows, agents, and applications. It has a ton of features required to build, deploy, evaluate, and monitor production AI applications.
 
