@@ -95,3 +95,7 @@ At some point I'll also be migrating past projects from my Youtube channel to th
 1. [Building Effective Agents (langgraph_module/effective_agents)](ai_launchpad/langgraph_module/effective_agents/README.md)
 2. [Frontends for Langgraph Agents (langgraph_module/frontends)](ai_launchpad/langgraph_module/frontends/README.md)
 3. [Langgraph Server (langgraph_module/langgraph_server)](ai_launchpad/langgraph_module/langgraph_server/README.md)
+
+### [Agents Module](ai_launchpad/agents_module/README.md)
+
+1. [Agent From Scratch (agents_module/agent_from_scratch)](ai_launchpad/agents_module/agent_from_scratch/README.md)
