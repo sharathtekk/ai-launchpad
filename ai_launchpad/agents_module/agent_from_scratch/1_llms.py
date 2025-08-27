@@ -82,6 +82,16 @@ for event in stream:
     print(event)
     print("\n-----\n")
 
+
+stream = client.responses.create(
+    model="gpt-4.1-mini-2025-04-14",
+    input=[
+        {"role": "system", "content": "Your name is Aura. Always respond like a pirate."},
+        {"role": "user", "content": "Hello world."},
+    ],
+    stream=True,
+)
+
 # Filter for just the text events
 for event in stream:
     if isinstance(event, ResponseTextDeltaEvent):
