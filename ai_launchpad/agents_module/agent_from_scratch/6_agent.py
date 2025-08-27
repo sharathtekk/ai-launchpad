@@ -387,7 +387,15 @@ messages = [
 # We set route_to_agent to False when we get a final response from the agent.
 # This pattern is commonly referred to as the "agent loop", and it's a core design pattern for agents. In fact, it's what gives the agent "agency", or the ability to decide what to do next.
 route_to_agent = False
+recursion_limit = 30
+
+turn = 0
 while True:
+    turn += 1
+    if turn >= recursion_limit:
+        print("\n\nRecursion limit reached. Exiting...\n\n", flush=True)
+        break
+    
     if not route_to_agent:
         user_input = input("\n\nUser: ")
         if user_input.lower() in ["exit", "quit"]:
