@@ -18,9 +18,9 @@ Hi! I'm Kenny, a Data Analytics Manager, AI Architect, and founder of the AI Lau
 
 ## Getting Started
 
-1. **Install Dependencies**
+1. **Install UV to Manage Python Projects**
 
-    I recommend uv to manage python projects.
+    [UV](https://docs.astral.sh/uv/) is a python project manager that replaces pip, poetry, pyenv, and more. It's 10-100x faster than pip and I recommend using it for all of your python projects.
 
     For MacOS it's easiest to install with homebrew:
 
@@ -34,7 +34,13 @@ Hi! I'm Kenny, a Data Analytics Manager, AI Architect, and founder of the AI Lau
     curl -LsSf https://astral.sh/uv/install.sh | sh
     ```
 
-    For Windows or additional information, see the uv [documentation](https://docs.astral.sh/uv/getting-started/installation/).
+    For Windows using irm:
+
+    ```bash
+    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+    ```
+
+    There are several other ways to install uv. For more information, see the uv [documentation](https://docs.astral.sh/uv/getting-started/installation/).
 
 2. **Clone the Repository and Navigate to the Project Directory**
 
@@ -49,7 +55,11 @@ Hi! I'm Kenny, a Data Analytics Manager, AI Architect, and founder of the AI Lau
     uv sync
     ```
 
+    By default, uv will create a virtual environment for you in the `.venv` directory in your project root.
+
     This also installs the ai_launchpad project in editable mode so any changes to the codebase will be immediately reflected.
+
+    Read more about managing python projects with [uv](https://docs.astral.sh/uv/guides/projects/).
 
 4. **Copy the .env.example file to .env and add your API keys**
 
