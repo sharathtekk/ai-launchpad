@@ -34,7 +34,13 @@ Hi! I'm Kenny, a Data Analytics Manager, AI Architect, and founder of the AI Lau
     curl -LsSf https://astral.sh/uv/install.sh | sh
     ```
 
-    For Windows or additional information, see the uv [documentation](https://docs.astral.sh/uv/getting-started/installation/).
+    For Windows using irm:
+
+    ```bash
+    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+    ```
+
+    There are several other ways to install uv. For more information, see the uv [documentation](https://docs.astral.sh/uv/getting-started/installation/).
 
 2. **Clone the Repository and Navigate to the Project Directory**
 
