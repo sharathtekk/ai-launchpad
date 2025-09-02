@@ -2,6 +2,10 @@
 
 This directory contains frontends for interacting with Langgraph Agents via the Langgraph Server API. The `streamlit_ui` directory contains a simple Streamlit app that allows you to interact with the agents via a web interface.
 
+## Video
+
+[![Frontends for Langgraph Agents](../../static/thumbnails/streamlit-ui-thumb.jpg)](https://youtu.be/yqvV88IAako)
+
 ## Getting Started
 
 1. If you haven't already, install the project by following the `Getting Started` instructions in the project root [README](../../../README.md).

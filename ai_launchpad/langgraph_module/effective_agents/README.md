@@ -8,7 +8,9 @@ Here, we will implement Anthropic's entire guide using Langgraph. First, we will
 
 **Understand the core design patterns in this guide and you'll be able to solve almost any problem with AI.**
 
-Watch the [Youtube Video](https://youtu.be/31JoTDm7jkM)!
+## Video
+
+[![Building Effective Agents](../../static/thumbnails/effective-agents-thumb.jpeg)](https://youtu.be/jsT4YUgz1E4)
 
 ## Getting Started
 

@@ -2,7 +2,9 @@
 
 In this tutorial, you will learn how to build your first AI agent from scratch in Python. By building an AI agent from scratch, you will learn the core design patterns and mechanics of AI agents. This will give you a strong foundation to build more complex and powerful agents and AI applications.
 
-Watch the [Youtube Video](https://youtu.be/31JoTDm7jkM)!
+## Video
+
+[![Agent From Scratch](../../static/thumbnails/agent-from-scratch-thumb.png)](https://youtu.be/gKOwIqBcEZA)
 
 ## Getting Started
 
