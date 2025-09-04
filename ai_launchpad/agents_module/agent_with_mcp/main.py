@@ -139,7 +139,7 @@ async def main():
                 search_products: Use the search_products tool to search the product database.
                 manage_memories: Use the manage_memories tool to create, update, or delete memories. Use immediately after receiving new information from the customer.
                 get_memories: Use the get_memories tool to retrieve all memories. You should always use this tool to retrieve all memories which may have important context, before responding to the customer.
-                analyze_customer: Use the analyze_customer tool to get a detailed analysis of the customer from their profile and purchase history, including insights about their most common purchased categories, products, preferred colors, most likely purchase amount range, categories of products they might be interested in but has not purchased yet, etc. Always use this tool whenver a customer is asking for recommendations.
+                analyze_customer: Use the analyze_customer tool to get a detailed analysis of the customer from their profile and purchase history, including insights about their most common purchased categories, products, preferred colors, most likely purchase amount range, categories of products they might be interested in but has not purchased yet, etc. Use this tool whenver a customer is asking for recommendations.
                 </available_tools>
                 </tool_calling>
 
