@@ -87,12 +87,12 @@ async def main():
         # Define any private tools and whether to hide them
         private_tools = ["retrieval_analyze_customer"]
 
-        print("<AVAILABLE LOCAL TOOLS>\n")
-        print([tool["name"] for tool in tool_schemas], "\n\n")
-
         mcp_tools = await mcp_client.list_tools()
         print("<AVAILABLE MCP TOOLS>\n")
         print([tool.name for tool in mcp_tools], "\n\n")
+
+        print("<AVAILABLE LOCAL TOOLS>\n")
+        print([tool["name"] for tool in tool_schemas], "\n\n")
 
         # Add the MCP tools to the tool schemas for the OpenAI API
         tool_schemas.extend([
@@ -257,7 +257,19 @@ async def main():
 
                     route_to_agent = False
 
+
+def is_interactive():
+    """Check if running in an interactive environment like Jupyter or IPython."""
+    try:
+        from IPython import get_ipython
+        return get_ipython() is not None
+    except ImportError:
+        return False
+    
+
 if __name__ == "__main__":
-    import nest_asyncio
-    nest_asyncio.apply()
+    if is_interactive():
+        import nest_asyncio
+        nest_asyncio.apply()
+
     asyncio.run(main())
