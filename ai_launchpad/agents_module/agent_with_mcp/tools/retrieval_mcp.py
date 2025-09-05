@@ -186,6 +186,7 @@ def get_user_profile(user_id: int) -> Dict[str, Any]:
     """Get the user profile."""
     return _get_user_profile_data(user_id)
 
+
 @mcp.prompt()
 def analyze_customer(user_id: int) -> str:
     """Analyze the customer and provide insights."""
@@ -212,6 +213,7 @@ def analyze_customer(user_id: int) -> str:
 
     Provide insights about the customer.
     """
+
 
 if __name__ == "__main__":
     # HTTP is the same as streamable-http
