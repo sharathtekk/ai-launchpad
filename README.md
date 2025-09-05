@@ -115,3 +115,4 @@ At some point I'll also be migrating past projects from my Youtube channel to th
 ### [Agents Module](ai_launchpad/agents_module/README.md)
 
 1. [Agent From Scratch (agents_module/agent_from_scratch)](ai_launchpad/agents_module/agent_from_scratch/README.md)
+2. [Agent With MCP (agents_module/agent_with_mcp)](ai_launchpad/agents_module/agent_with_mcp/README.md)
