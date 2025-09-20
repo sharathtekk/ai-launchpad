@@ -33,9 +33,8 @@ load_dotenv()
 # Switch models to see how the post quality improves with a more capable model
 llm = ChatOpenAI(
     name="Jude",
-    # model="gpt-4.1-mini-2025-04-14",
-    # model="gpt-4.1",
-    model="gpt-4o",
+    model="gpt-5-mini-2025-08-07",
+    # model="gpt-5-2025-08-07",
     temperature=0.1,
 )
 
@@ -75,18 +74,28 @@ class AgentState(BaseModel):
 def generate_task_list(task_list: TaskList):
     """Generate a new task list or update the existing task list by replacing it."""
     store["tasks"] = task_list
-    return task_list
+    return store["tasks"].model_dump_json()
 
 @tool
 def view_task_list():
     """View the task list"""
+    if "tasks" not in store:
+        return "No task list found."
     return store["tasks"].model_dump_json()
 
 # The agent will also have web search capabilities for content research
 @tool
-def search_web(query: str, num_results: int = 3) -> str:
-    """Search the web with a natural language query"""
-    tavily_search = TavilySearch(max_results=min(num_results, 3), topic="general")
+def search_web(query: str, num_results: int = 3):
+    """Search the web and get back a list of search results including the page title, url, and a short summary of each webpage.
+
+    Args:
+        query: The search query.
+        num_results: The number of results to return, max is 3.
+
+    Returns:
+        A dictionary of the search results.
+    """
+    tavily_search = TavilySearch(max_results=max(num_results, 3), topic="general")
     search_results = tavily_search.invoke(input={"query": query})
     
     processed_results = {
@@ -106,8 +115,12 @@ def search_web(query: str, num_results: int = 3) -> str:
 tavily_extract = TavilyExtract()
 
 @tool
-def extract_content_from_webpage(url: str) -> str:
-    """Extract the content from a webpage"""
+def extract_content_from_webpage(url: str):
+    """Extract the raw content from a webpage. Use this tool if you need the full context of a webpage.
+
+    Args:
+        url: The url of the webpage to extract content from.
+    """
     result_contents = tavily_extract.invoke(input={"urls": [url]})
     raw_content = result_contents["results"][0]["raw_content"]
     return raw_content
@@ -423,6 +436,7 @@ builder.add_conditional_edges(
 )
 
 graph = builder.compile(checkpointer=MemorySaver())
+graph_no_checkpointer = builder.compile()
 
 # Visualize the graph
 from IPython.display import Image
